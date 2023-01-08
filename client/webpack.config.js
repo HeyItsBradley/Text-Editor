@@ -28,18 +28,18 @@ module.exports = () => {
         short_name: "JATE",
         description: "An app for editing text",
         background_color: "#224ca3",
-        crossorigin: "null", //can be null, use-credentials or anonymous
+        crossorigin: null, //can be null, use-credentials or anonymous
         icons: [
           {
-            src: path.resolve("src/assets/icon.png"),
+            src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
           },
           {
-            src: path.resolve("src/assets/large-icon.png"),
+            src: path.resolve("src/images/logo.png"),
             size: "1024x1024", // you can also use the specifications pattern
           },
           {
-            src: path.resolve("src/assets/maskable-icon.png"),
+            src: path.resolve("src/images/logo.png"),
             size: "1024x1024",
             purpose: "maskable",
           },
