@@ -20,28 +20,23 @@ module.exports = () => {
         title: "TODOs List",
       }),
       new InjectManifest({
-        swSrc: "./sw.js",
-        swDest: "service-worker.js",
+        swSrc: "./src/js/src-sw.js",
+        swDest: "src-sw.js",
       }),
       new WebpackPwaManifest({
         name: "Just Another Text Editer",
         short_name: "JATE",
         description: "An app for editing text",
         background_color: "#224ca3",
-        crossorigin: null, //can be null, use-credentials or anonymous
+        theme_color: "#224ca3",
+        start_url: "./",
+        publicPath: "./",
+
         icons: [
           {
             src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
-          },
-          {
-            src: path.resolve("src/images/logo.png"),
-            size: "1024x1024", // you can also use the specifications pattern
-          },
-          {
-            src: path.resolve("src/images/logo.png"),
-            size: "1024x1024",
-            purpose: "maskable",
+            destination: path.join("assets", "icons"),
           },
         ],
       }),
@@ -55,15 +50,11 @@ module.exports = () => {
         },
         {
           test: /\.m?js$/,
-          exclude: /node_modules/,
+          exclude: /(node_modules|bower_components)/,
           use: {
             loader: "babel-loader",
             options: {
               presets: ["@babel/preset-env"],
-              plugins: [
-                "@babel/plugin-proposal-object-rest-spread",
-                "@babel/transform-runtime",
-              ],
             },
           },
         },
