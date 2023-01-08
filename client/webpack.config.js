@@ -27,7 +27,7 @@ module.exports = () => {
         name: "Just Another Text Editer",
         short_name: "JATE",
         description: "An app for editing text",
-        background_color: "#ffffff",
+        background_color: "#224ca3",
         crossorigin: "null", //can be null, use-credentials or anonymous
         icons: [
           {
