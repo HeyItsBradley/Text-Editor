@@ -30,7 +30,6 @@ export const getDb = async () => {
   const request = store.getAll();
   const result = await request;
   console.log(`Retrieved content from jate database: ${result}`);
-  return result;
 };
 
 initdb();

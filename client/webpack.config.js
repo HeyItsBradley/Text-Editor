@@ -20,7 +20,7 @@ module.exports = () => {
         title: "TODOs List",
       }),
       new InjectManifest({
-        swSrc: "./src/js/src-sw.js",
+        swSrc: "./src-sw.js",
         swDest: "src-sw.js",
       }),
       new WebpackPwaManifest({
