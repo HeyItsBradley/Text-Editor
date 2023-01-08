@@ -31,6 +31,7 @@ module.exports = () => {
         theme_color: "#224ca3",
         start_url: "./",
         publicPath: "./",
+        fingerprints: false,
 
         icons: [
           {
